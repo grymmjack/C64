@@ -1,0 +1,100 @@
+------- FILE /var/folders/w8/rj15q0c133ngbz1m8z28_rcr0000gn/T//xcbtmp_5FE1DC66.asm LEVEL 1 PASS 3
+      1 U0b16					      PROCESSOR	6502
+      2 U0b16					      INCDIR	"/Users/gj/C64/gj01/."
+      3  0b15 ????				      SEG	UPSTART
+      4  0800					      ORG	$800
+      5  0800		       00		      HEX	00
+      6  0801		       0b 08		      DC.W	next_line
+      7  0803		       e2 07		      DC.W	2018
+      8  0805		       9e		      HEX	9e
+      9  0806					      IF	prg_start
+     10  0806		       32 37 36 37	      DC.B	[prg_start]d
+     11  080a					      ENDIF
+     12  080a		       00		      HEX	00
+     13  080b				   next_line
+     14  080b		       00 00		      HEX	00 00
+     15  080d							;------------	  --------
+ Memory information:
+     16  080d					      ECHO	"Memory information:"
+ ===================
+     17  080d					      ECHO	"==================="
+ BASIC loader: $800 - $80c
+     18  080d					      ECHO	"BASIC loader: $800 -", *-1
+     19  080d				   library_start
+     20  080d					      PROCESSOR	6502
+   2434  0985					      LIST	ON
+   2435  0985
+   2959  0985					      LIST	ON
+   3265  0acf					      LIST	ON
+ Library     : $80d - $ace
+   3266  0acf					      ECHO	"Library     :",library_start,"-", *-1
+   3267  0acf				   prg_start
+   3268  0acf				   FPUSH      SET	0
+   3269  0acf				   FPULL      SET	0
+      0  0acf					      init_program
+      1  0acf		       ba		      tsx
+      2  0ad0		       8e 85 09 	      stx	RESERVED_STACK_POINTER
+      0  0ad3					      seed_rnd
+      1  0ad3		       a9 80		      lda	#$80
+      2  0ad5		       85 8b		      sta	ZP_RNDSEED
+      3  0ad7		       a5 a2		      lda	ZP_JIFFY + 2
+      4  0ad9		       85 8c		      sta	ZP_RNDSEED + 1
+      5  0adb		       a5 a1		      lda	ZP_JIFFY + 1
+      6  0add		       85 8d		      sta	ZP_RNDSEED + 2
+      7  0adf		       a5 a0		      lda	ZP_JIFFY
+      8  0ae1		       85 8e		      sta	ZP_RNDSEED + 3
+      0  0ae3					      basicout
+      1  0ae3		       a5 01		      lda	$01
+      2  0ae5		       29 fe		      and	#%11111110
+      3  0ae7		       85 01		      sta	$01
+   3271  0ae9
+   3272  0ae9				   _L10
+      0  0ae9					      paddr	_S1
+      0  0ae9					      pword	_S1
+      1  0ae9					      IF	!FPUSH
+      2  0ae9		       a9 08		      lda	#<_S1
+      3  0aeb		       48		      pha
+      4  0aec		       a9 0b		      lda	#>_S1
+      5  0aee		       48		      pha
+      6  0aef				  -	      ELSE
+      7  0aef				  -	      lda	#<_S1
+      8  0aef				  -	      ldy	#>_S1
+      9  0aef					      ENDIF
+      0  0aef					      stdlib_putstr
+      1  0aef		       68		      pla
+      2  0af0		       a8		      tay
+      3  0af1		       68		      pla
+      4  0af2		       20 8c 09 	      jsr	STDLIB_PRINT
+   3275  0af5		       a9 0d		      lda	#13
+   3276  0af7		       20 16 e7 	      jsr	KERNAL_PRINTCHR
+   3277  0afa				   _L20
+   3278  0afa		       4c e9 0a 	      jmp	_L10
+   3279  0afd
+   3280  0afd				   prg_end
+      0  0afd					      halt
+      0  0afd					      basicin
+      1  0afd		       a5 01		      lda	$01
+      2  0aff		       09 01		      ora	#%00000001
+      3  0b01		       85 01		      sta	$01
+      2  0b03		       ae 85 09 	      ldx	RESERVED_STACK_POINTER
+      3  0b06		       9a		      txs
+      4  0b07		       60		      rts
+   3282  0b08
+   3283  0b08				   FPUSH      SET	0
+   3284  0b08				   FPULL      SET	0
+ Code        : $acf - $b07
+   3285  0b08					      ECHO	"Code	      :",prg_start,"-", *-1
+   3286  0b08				   data_start
+   3287  0b08		       48 45 4c 4c*_S1	      HEX	48 45 4C 4C 4F 20 57 4F 52 4C 44 21 00
+   3288  0b15				   data_end
+ Data        : $b08 - $b14
+   3289  0b15					      ECHO	"Data	      :",data_start,"-", *-1
+   3290  0b15							;--------------
+   3291 U0b16 ????				      SEG.U	variables
+   3292 U0b16					      ORG	data_end+1
+ Variables*  : $b15 - $b16
+   3293 U0b16					      ECHO	"Variables*  :",data_end,"-", *
+ ===================
+   3294 U0b16					      ECHO	"==================="
+ *: uninitialized segment
+   3295 U0b16					      ECHO	"*: uninitialized segment"
