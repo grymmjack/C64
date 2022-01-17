@@ -1,0 +1,2 @@
+.label start=$4000
+.label irq1=$4039
