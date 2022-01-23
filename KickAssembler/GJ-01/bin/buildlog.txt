@@ -10,7 +10,7 @@ Memory Map
 Default-segment:
   $0801-$080d Basic
   $080e-$080d Basic End
-  $1000-$2290 Music
-  $4000-$404b Main Program
+  $1000-$16f9 Music
+  $4000-$404e Main Program
 
 Writing Symbol file: test.sym

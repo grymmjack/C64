@@ -6,6 +6,15 @@
         {
             "label": "Build XC_BASIC file to .prg",
             "type": "shell",
+            "windows": {
+                "command": "xcbasic64",
+                "args": [
+                    "${file}",
+                    "${fileDirname}/${fileBasenameNoExtension}.prg",
+                    "-list",
+                    "${fileDirname}/${fileBasenameNoExtension}.list"
+                ]
+            },
             "osx": {
                 "command": "xcbasic64",
                 "args": [
@@ -27,6 +36,9 @@
         {
             "label": "Run in VICE",
             "type": "shell",
+            "windows": {
+                "command": "x64sc +basicload -sound ${fileDirname}/${fileBasenameNoExtension}.prg"
+            },
             "osx": {
                 "command": "/usr/local/Cellar/vice/3.6/bin/x64sc +basicload -sound ${fileDirname}/${fileBasenameNoExtension}.prg"
             },

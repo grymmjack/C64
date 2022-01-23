@@ -6,6 +6,9 @@
         {
             "label": "COMPILE",
             "type": "shell",
+            "windows": {
+                "command": "petcat -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${file}"
+            },
             "osx": {
                 "command": "petcat -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${file}"
             },
@@ -21,8 +24,12 @@
         {
             "label": "Run in VICE",
             "type": "shell",
+            "windows": {
+                "command": "x64sc -autostartprgmode 1 ${fileDirname}/${fileBasenameNoExtension}.prg"            
+            },
             "osx": {
-                "command": "/usr/local/Cellar/vice/3.6/bin/x64sc -autostartprgmode 1 ${fileDirname}/${fileBasenameNoExtension}.prg"            },
+                "command": "/usr/local/Cellar/vice/3.6/bin/x64sc -autostartprgmode 1 ${fileDirname}/${fileBasenameNoExtension}.prg"            
+            },
             "group": {
                 "kind": "test",
                 "isDefault": true
