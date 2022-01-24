@@ -1,0 +1,7 @@
+.label spritePtrs=$2076
+.label charset=$2800
+.label sinus=$207e
+.label start=$2000
+.label screen=$3c00
+.label sprite2=$2880
+.label sprite1=$2840

@@ -1,0 +1,41 @@
+Output dir: /Users/gj/git/C64/KickAssembler/Examples/02.Simple Scripting/bin
+parsing
+flex pass 1
+Output pass
+  Hello World!
+  
+  Lets do a countdown:
+  10
+  9
+  8
+  7
+  6
+  5
+  4
+  3
+  2
+  1
+  
+  x*y-5=26.5
+  
+  Who is at place number 2:Edgar
+  
+  Pythagoras says that c is 22.360679774997898
+  
+  Sinus:
+         o
+           o
+           o
+         o
+       o
+    o
+  o
+  o
+    o
+      o
+Writing prg file: SimpleScripting.prg
+
+Memory Map
+----------
+
+Writing Symbol file: SimpleScripting.sym

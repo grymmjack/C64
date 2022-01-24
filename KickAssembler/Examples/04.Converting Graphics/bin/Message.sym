@@ -1,0 +1,4 @@
+.label exit=$102d
+.label loop=$100d
+.label start=$1000
+.label text=$1030

@@ -1,0 +1,16 @@
+Output dir: /Users/gj/git/C64/KickAssembler/Examples/05.Scoping/bin
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: Scroll.prg
+
+Memory Map
+----------
+Default-segment:
+  $0801-$080c Basic
+  $080e-$080d Basic End
+  $1000-$10cb Unnamed
+
+Writing Symbol file: Scroll.sym

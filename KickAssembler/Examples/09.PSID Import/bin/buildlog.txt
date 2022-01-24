@@ -1,0 +1,37 @@
+Output dir: /Users/gj/git/C64/KickAssembler/Examples/09.PSID Import/bin
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+  
+  SID Data
+  --------
+  location=$1000
+  init=$1000
+  play=$1003
+  songs=1
+  startSong=1
+  size=$c08
+  name=RAINY FUNKY JUNE
+  author=SidTracker64 v1.0
+  copyright=2022-01-18
+  
+  Additional tech data
+  --------------------
+  header=PSID
+  header version=2
+  flags=100100
+  speed=0
+  startpage=0
+  pagelength=0
+Writing prg file: SID_Player.prg
+
+Memory Map
+----------
+Default-segment:
+  $0801-$080c Basic
+  $080e-$085c Basic End
+  $1000-$1c07 Music
+
+Writing Symbol file: SID_Player.sym

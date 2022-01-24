@@ -1,0 +1,10 @@
+.label frameNo=$980
+.label playJsr=$963
+.label music_init=$1000
+.label start=$900
+.label irq1=$93c {
+}
+.label intD012=$989
+.label intD011=$991
+.label music_play=$1003
+.label intPlay=$981

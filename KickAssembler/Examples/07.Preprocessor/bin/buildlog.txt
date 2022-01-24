@@ -1,0 +1,16 @@
+Output dir: /Users/gj/git/C64/KickAssembler/Examples/07.Preprocessor/bin
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: Preprocessor.prg
+
+Memory Map
+----------
+Default-segment:
+  $0801-$080c Basic
+  $080e-$0845 Basic End
+  $5000-$5051 Unnamed
+
+Writing Symbol file: Preprocessor.sym

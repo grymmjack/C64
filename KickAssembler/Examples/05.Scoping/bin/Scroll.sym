@@ -1,0 +1,14 @@
+.label setScrollD016=$1022 {
+  .label value=$1022
+}
+.label moveScroll=$102c {
+  .label exit=$105a
+  .label count=$1045
+  .label loop1=$103a
+  .label text=$105b
+  .label over1=$1057
+}
+.label mainProg=$1000 {
+  .label loop2=$1010
+  .label loop1=$1006
+}

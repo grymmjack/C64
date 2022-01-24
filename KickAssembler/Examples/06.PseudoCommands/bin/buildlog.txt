@@ -1,0 +1,17 @@
+Output dir: /Users/gj/git/C64/KickAssembler/Examples/06.PseudoCommands/bin
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: 8xSpeedPlayer.prg
+
+Memory Map
+----------
+Default-segment:
+  $0801-$080c Basic
+  $080e-$080d Basic End
+  $0900-$0998 Main Program
+  $1000-$2000 Music
+
+Writing Symbol file: 8xSpeedPlayer.sym
