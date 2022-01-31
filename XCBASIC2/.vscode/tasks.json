@@ -28,9 +28,6 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "options": {
-                "cwd": "${config:xcbasic.basefolder}"
-            },
             "problemMatcher": []
         },
         {
@@ -46,9 +43,6 @@
                 "kind": "test",
                 "isDefault": true
             },            
-            "options": {
-                "cwd": "${config:xcbasic.basefolder}"
-            },
             "problemMatcher": []
         }
     ]

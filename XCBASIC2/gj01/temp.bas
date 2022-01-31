@@ -2,7 +2,7 @@
 20 print "{yel}2{down}"
 30 print "{lblu}4"
 40 print "5"
-50 print "{up}{up}{up}3","here row = ";:print peek(214);:print ", col = ";:print peek(211);"{down}{down}{down}"
+50 print "3","here row = ";:print peek(214);:print ", col = ";:print peek(211);
 55 gosub 3000
 60 row = 10:col = 20:gosub 2000:print "farts";
 70 row = 15:col = 1:gosub 2000

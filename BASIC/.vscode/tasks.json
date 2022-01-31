@@ -7,10 +7,10 @@
             "label": "COMPILE",
             "type": "shell",
             "windows": {
-                "command": "petcat -2 -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${file}"
+                "command": "petcat -ic -v -2 -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${file}"
             },
             "osx": {
-                "command": "petcat -2 -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${file}"
+                "command": "petcat -ic -v -2 -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${file}"
             },
             "group": {
                 "kind": "build",
