@@ -23,24 +23,18 @@
 
     50 for i=0 to 39
         52 gosub 1500:rem get cursor position
-        54 for n=0 to pause:next n
         55 if i-int(i/flash)*flash = 0 then row=tr:col=tc:gosub 1000:print "{rvon}{lblu}it works!{rvof}{12 space}{11 left}{white}r";crow;"c";ccol;:goto 60
         58 row=tr:col=tc:gosub 1000:print "{rvon}{white}it works!{rvof}{12 space}{11 left}{white}r";crow;"c";ccol;
         60 row=r:col=i:gosub 1000:rem set cursor position
-        70 print ">";
-        80 for n=0 to pause:next n
-        90 print "{del} ";
+        70 wait 53265,128:print ">";:wait 53265,128:print"{del}";:wait 53265,128:print" ";
     100 next i
 
     150 for i=39 to 1 step -1
         152 gosub 1500:rem get pursor position
-        154 for n=0 to pause:next n
         155 if i-int(i/flash)*flash = 0 then row=tr:col=tc:gosub 1000:print "{rvon}{lblu}it works!{rvof}{12 space}{11 left}{white}r";crow;"c";ccol;:goto 160
         158 row=tr:col=tc:gosub 1000:print "{rvon}{white}it works!{rvof}{12 space}{11 left}{white}r";crow;"c";ccol;
         160 row=r:col=i:gosub 1000:rem set cursor position
-        170 print "<";
-        180 for n=0 to pause:next n
-        190 print "{del} ";
+        170 wait 53265,128:print ">";:wait 53265,128:print"{del}";:wait 53265,128:print" ";
     200 next i
 
 210 next r

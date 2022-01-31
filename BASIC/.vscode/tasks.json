@@ -7,33 +7,53 @@
             "label": "COMPILE",
             "type": "shell",
             "windows": {
-                "command": "petcat -ic -v -2 -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${file}"
+                "command": "petcat -ic -v -2 -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${fileDirname}/${fileBasenameNoExtension}_.bas"
             },
             "osx": {
-                "command": "petcat -ic -v -2 -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${file}"
+                "command": "petcat -ic -v -2 -w2 -o ${fileDirname}/${fileBasenameNoExtension}.prg -- ${fileDirname}/${fileBasenameNoExtension}_.bas"
             },
             "group": {
-                "kind": "build",
+                "kind": "test",
                 "isDefault": true
             },
+            "dependsOn": [
+                "CRUNCH"
+            ],
             "options": {
                 "cwd": "${cwd}"
             },
             "problemMatcher": []
         },
         {
-            "label": "Run in VICE",
+            "label": "RUN",
             "type": "shell",
             "windows": {
-                "command": "x64sc -autostartprgmode 1 ${fileDirname}/${fileBasenameNoExtension}.prg"            
+                "command": "x64sc -autostartprgmode 1 ${fileDirname}/${fileBasenameNoExtension}.prg"
             },
             "osx": {
-                "command": "/usr/local/Cellar/vice/3.6/bin/x64sc -autostartprgmode 1 ${fileDirname}/${fileBasenameNoExtension}.prg"            
+                "command": "/usr/local/Cellar/vice/3.6/bin/x64sc -autostartprgmode 1 ${fileDirname}/${fileBasenameNoExtension}.prg"
             },
             "group": {
-                "kind": "test",
+                "kind": "build",
                 "isDefault": true
             },            
+            "dependsOn": [
+                "COMPILE"
+            ],
+            "options": {
+                "cwd": "${cwd}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "CRUNCH",
+            "type": "shell",
+            "windows": {
+                "command": "${fileDirname}/../cruncher.sh ${file}"
+            },
+            "osx": {
+                "command": "${fileDirname}/../cruncher.sh ${file}"
+            },
             "options": {
                 "cwd": "${cwd}"
             },
