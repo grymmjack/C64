@@ -75,7 +75,7 @@
 10000 data 24:rem 49152 clc
 10010 data 162, 0:rem 49153 ldx,x - 49154 = x
 10020 data 160, 0:rem 49155 ldy,y - 49156 = y
-10030 data 32, 10, 229:rem 49157 jsr, 49158+49159=$e50a kernal plot
+10030 data 32, 10, 229:rem 49157 jsr, 49158+49159=$e50a kernal plot (0a=10,e5=229) lb+hb nibble
 10040 data 96:rem 49160 rts
 10049 rem sentinel value to signal end of data
 10050 data -1
