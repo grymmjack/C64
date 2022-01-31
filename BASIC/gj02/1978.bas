@@ -1,5 +1,5 @@
 0 rem poke 56328,0:r=rnd(0):poke 53280,int(rnd(.5)*15+1):poke 53281,int(rnd(.5)*15+1):z=0
-0 poke 56328,0:r=rnd(0):poke 53280,0:poke 53281,1:print "{clear}";:z=0
+0 poke 56328,0:r=rnd(0):poke 53280,0:poke 53281,0:print "{clear}";:z=0
 1 x=0:print tab((int(rnd(.5)*20+1)))
 2 y=int(rnd(1)*50)
 3 c$="{blk}{wht}{pur}{orng}{blu}{lblu}{grn}{pur}{lred}{gry1}{gry2}{gry3}{brn}{yel}{grn}{red}{lred}{red}{orng}{brn}{lblu}"
@@ -12,5 +12,5 @@
 10 print "{rvon} {$e0}{down}{left}{$e0} {up}";
 11 print mid$(a$,rnd(.5)*6+1,1);:x=x+1:if x>=y then print mid$(c$,rnd(.5)*21+1,1);
 12 if x>=y then z=z+1:goto 1
-13 if z>=int(rnd(.5)*30+10) then goto 1
+13 if z>=int(rnd(.5)*30+10) then z=0:goto 1
 14 goto 3
