@@ -1,0 +1,17 @@
+Output dir: /Users/gj/git/C64/KickAssembler/GJ-01/bin
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: test.prg
+
+Memory Map
+----------
+Default-segment:
+  $0801-$080d Basic
+  $080e-$080d Basic End
+  $1000-$16f9 Music
+  $4000-$404e Main Program
+
+Writing Symbol file: test.sym

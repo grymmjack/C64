@@ -1,0 +1,66 @@
+<C64debugger version="1.0">
+   <Sources values="INDEX,FILE">
+      0,KickAss.jar:/include/autoinclude.asm
+      1,/Users/gj/git/C64/KickAssembler/GJ-01/test.asm
+   </Sources>
+
+   <Segment name="Default" dest="" values="START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
+      <Block name="Basic">
+         $0801,$0802,0,56,2,56,6
+         $0803,$0804,0,57,5,57,9
+         $0805,$0805,0,58,5,58,9
+         $0806,$080a,0,59,2,59,6
+         $080b,$080b,0,60,2,60,6
+         $080c,$080d,0,62,5,62,9
+      </Block>
+      <Block name="Music">
+         $1000,$16f9,1,42,5,42,11
+      </Block>
+      <Block name="Main Program">
+         $4000,$4001,1,8,8,8,10
+         $4002,$4004,1,9,5,9,7
+         $4005,$4007,1,10,5,10,7
+         $4008,$4009,1,11,5,11,7
+         $400a,$400c,1,12,5,12,7
+         $400d,$400d,1,13,5,13,7
+         $400e,$400f,1,14,5,14,7
+         $4010,$4012,1,15,5,15,7
+         $4013,$4014,1,16,5,16,7
+         $4015,$4017,1,17,5,17,7
+         $4018,$4019,1,18,5,18,7
+         $401a,$401c,1,19,5,19,7
+         $401d,$401f,1,20,5,20,7
+         $4020,$4021,1,21,5,21,7
+         $4022,$4024,1,22,5,22,7
+         $4025,$4026,1,23,5,23,7
+         $4027,$4029,1,24,5,24,7
+         $402a,$402b,1,25,5,25,7
+         $402c,$402e,1,26,5,26,7
+         $402f,$4031,1,27,5,27,7
+         $4032,$4034,1,28,5,28,7
+         $4035,$4037,1,29,5,29,7
+         $4038,$4038,1,30,5,30,7
+         $4039,$403b,1,31,5,31,7
+         $403c,$403e,1,34,7,34,9
+         $403f,$4040,1,47,5,47,7
+         $4041,$4043,1,48,5,48,7
+         $4044,$4046,1,36,5,36,7
+         $4047,$4048,1,47,5,47,7
+         $4049,$404b,1,48,5,48,7
+         $404c,$404e,1,38,5,38,7
+      </Block>
+   </Segment>
+
+   <Labels values="SEGMENT,ADDRESS,NAME,START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
+      Default,$4000,start,1,8,1,8,6
+      Default,$403c,irq1,1,34,1,34,5
+      Default,$080c,upstartEnd,0,61,1,61,11
+   </Labels>
+
+   <Breakpoints values="SEGMENT,ADDRESS,ARGUMENT">
+   </Breakpoints>
+
+   <Watchpoints values="SEGMENT,ADDRESS1,ADDRESS2,ARGUMENT">
+   </Watchpoints>
+
+</C64debugger>
