@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Build kickass GJ-02\\gj-02.asm",
+			"command": "C:\\\\Program Files (x86)\\\\Common Files\\\\Oracle\\\\Java\\\\javapath\\\\java.exe",
+			"args": [
+				"-jar",
+				"c:\\\\C64\\\\Applications\\\\KickAss.jar",
+				"-odir",
+				"./bin",
+				"-log",
+				"buildlog.txt",
+				"-showmem",
+				"-debugdump",
+				"-vicesymbols",
+				"GJ-02\\gj-02.asm"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		}
+	]
+}

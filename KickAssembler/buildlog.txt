@@ -1,0 +1,15 @@
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: gj-02.prg
+
+Memory Map
+----------
+Default-segment:
+  $0801-$080c Basic
+  $080e-$081b Basic End
+
+Writing Vice symbol file: gj-02.vs
+Writing Symbol file: gj-02.sym

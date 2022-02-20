@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"configurations": [
+		{
+			"type": "kickassembler",
+			"request": "launch",
+			"name": "Debug kickass GJ-02\\gj-02.asm file",
+			"program": "${workspaceFolder}\\GJ-02\\gj-02.asm",
+			"binDirectory": "${workspaceFolder}\\bin",
+			"preLaunchTask": "Build kickass GJ-02\\gj-02.asm"
+		}
+	]
+}
