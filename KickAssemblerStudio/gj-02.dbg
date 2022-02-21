@@ -13,26 +13,28 @@
          $080a,$080a,0,60,2,60,6
          $080b,$080c,0,62,5,62,9
       </Block>
-      <Block name="Basic End">
-         $080e,$080f,1,4,5,4,7
-         $0810,$0812,1,7,5,7,7
-         $0813,$0814,1,8,5,8,7
-         $0815,$0816,1,11,5,11,7
-         $0817,$0817,1,12,5,12,7
-         $0818,$081a,1,13,5,13,7
-         $081b,$081b,1,16,5,16,7
+      <Block name="Unnamed">
+         $1000,$1001,1,8,5,8,7
+         $1002,$1003,1,9,5,9,7
+         $1004,$1006,1,12,5,12,7
+         $1007,$1009,1,13,5,13,7
+         $100a,$100c,1,14,5,14,7
+         $100d,$100f,1,15,5,15,7
+         $1010,$1010,1,16,5,16,7
+         $1011,$1012,1,17,5,17,7
+         $1013,$1014,1,18,5,18,7
+         $1015,$1015,1,21,5,21,7
       </Block>
    </Segment>
 
    <Labels values="SEGMENT,ADDRESS,NAME,START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
-      Default,$080e,start,1,3,1,3,6
-      Default,$0810,loop,1,6,1,6,5
-      Default,$081b,end,1,15,1,15,4
+      Default,$1000,start,1,7,1,7,6
+      Default,$1004,loop,1,11,1,11,5
+      Default,$1015,end,1,20,1,20,4
       Default,$080b,upstartEnd,0,61,1,61,11
    </Labels>
 
    <Breakpoints values="SEGMENT,ADDRESS,ARGUMENT">
-      Default,$0815,
    </Breakpoints>
 
    <Watchpoints values="SEGMENT,ADDRESS1,ADDRESS2,ARGUMENT">
