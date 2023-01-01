@@ -10,7 +10,7 @@
 8 print "{rvon}   {3 left}{down}   {3 left}{up}";:goto 11
 9 print "{rvon}     {5 left}{down}     {5 left}{down}     {5 left}{up}{up}";:goto 11
 10 print "{rvon} {$e0}{down}{left}{$e0} {up}";
-11 print mid$(a$,rnd(.5)*6+1,1);:x=x+1:if x>=y then print mid$(c$,rnd(.5)*21+1,1);
+11 print mid$(a$,rnd(.5) *6+1,1);:x=x+1:if x>=y then print mid$(c$,rnd(.5)*21+1,1);
 12 if x>=y then z=z+1:goto 1
 13 if z>=int(rnd(.5)*30+10) then z=0:goto 1
 14 goto 3

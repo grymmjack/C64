@@ -49,7 +49,7 @@
             "label": "CRUNCH",
             "type": "shell",
             "windows": {
-                "command": "${fileDirname}/../cruncher.sh ${file}"
+                "command": "bash --norc cruncher.sh ${fileBasename} ${relativeFileDirname}"
             },
             "osx": {
                 "command": "${fileDirname}/../cruncher.sh ${file}"
